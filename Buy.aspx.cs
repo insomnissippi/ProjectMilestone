@@ -76,6 +76,6 @@ public partial class _Default : System.Web.UI.Page
             dbConnection.Open();
             dbConnection.Close();
         }
-        catch { Response.Write("NO"); }
+        catch {Response.Write("NO");}
     }
 }
