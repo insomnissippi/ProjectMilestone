@@ -49,6 +49,15 @@
         color: Red;
         text-align: center;
     }
+    #prod
+    {
+        font-family: Sans-Serif;
+        font-weight: bold;
+        font-size: 25px;
+        color: black;
+        text-align: center;
+        margin: 0 auto;
+    }
     #searchBtn
     {
           outline: none;
@@ -62,7 +71,6 @@
     #searchBtn:active:before {
       width: 120%;
       padding-top: 120%;
-      
       transition: width .2s ease-out, padding-top .2s ease-out;
     }
     #searchBtn:hover, #searchBtn:focus {
@@ -125,14 +133,15 @@
 
                     <div id="search">
                           <h1 id="h1text">ATHF</h1>
-                          
+                          <p id="prod">Product Details & Descriptions</p>
                           <asp:Label ID="statusL" runat="server" />
                           
                           <asp:GridView ID="ProductsGrid" runat="server" AutoGenerateColumns="false">
                                <Columns>
                                     <asp:BoundField DataField="productID" HeaderText="Product ID" />
                                     <asp:BoundField DataField="productName" HeaderText="Product Name" />
-                                    <asp:BoundField DataField="productPrice" HeaderText="Product Price:" />
+                                    <asp:BoundField DataField="productPrice" DataFormatString="{0:c2}" HeaderText="Product Price:" />
+                                    <asp:BoundField DataField="prodDescription" HeaderText="Product Description:" />
                              </Columns>
                          </asp:GridView>
 

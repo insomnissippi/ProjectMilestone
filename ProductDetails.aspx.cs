@@ -18,9 +18,7 @@ public partial class ProductDetails : System.Web.UI.Page
         {
             try
             {
-                
-                
-                string retString = "Select productID, productName, productPrice from products where productID = @productID;";
+                string retString = "Select productID, productName, productPrice, prodDescription from products where productID = @productID;";
 
                 using (SqlConnection dbConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["productsGrid"].ConnectionString))
                 using (SqlCommand sqlCmd = new SqlCommand(retString, dbConnection))

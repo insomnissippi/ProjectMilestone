@@ -26,6 +26,40 @@ from products
 Where productID like '%' OR productName like '%' OR productPrice like '%'
 
 use productsGrid
-insert into [dbo].[products] (productImage) values ('athf5_screen1.jpg');
+insert into [dbo].[products] (productImage)  values ('athf5_screen1.jpg');
 insert into [dbo].[products] (productImage) values ('2028125-chessdragon.jpg');
 insert into [dbo].[products] (productImage) values ('Fourteen.jpg');
+
+use productsGrid
+alter table [dbo].[products] add prodDescription nvarchar(1000);
+
+update products
+set productImage = 'athf5_screen1.jpg'
+where productID = 1;
+
+update products
+set productImage = '2028125-chessdragon.jpg'
+where productID = 2;
+
+
+update products
+set productImage = 'Fourteen.jpg'
+where productID = 3;
+
+select * 
+from products
+
+delete from products 
+where productID = 6;
+
+update products
+set prodDescription = 'The shake phone, for all of your communication needs'
+where productID = 1;
+
+update products
+set prodDescription = 'The Chess Dragon, Engage him at your own risk. "Not Legal in Canada"'
+where productID = 2;
+
+update products
+set prodDescription = 'The Number Fourteen, make it yours'
+where productID = 3;
