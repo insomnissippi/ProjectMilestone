@@ -238,9 +238,9 @@
      <!--NAVIGATION STARTS HERE -->
         <nav>
             <ul>
-                <li><a href="">Home</a></li>
+                <li><a href="Default.aspx">Home</a></li>
                 <li><a href="Buy.aspx">Buy</a></li>
-                <li><a href="game.aspx">Where's Shake?</a></li>
+                <li><a href="">Where's Shake?</a></li>
                 <li><a href="contact.aspx">Contact</a></li>
                 <li><a href="aboutus.aspx">About Us</a></li>
             </ul>

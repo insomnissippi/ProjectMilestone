@@ -10,6 +10,7 @@ using System.Configuration;
 
 public partial class _Default : System.Web.UI.Page
 {
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!Page.IsPostBack)
@@ -49,7 +50,7 @@ public partial class _Default : System.Web.UI.Page
             SqlConnection dbConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["productsGrid"].ConnectionString);
             dbConnection.Open();
             dbConnection.ChangeDatabase("productsGrid");
-            string retString = "Select productID as ProductID, productName as Name, productPrice as Price from products order by productID";
+            string retString = "Select productID, productName, productPrice from products order by productID";
             SqlDataAdapter productHistory = new SqlDataAdapter(retString, dbConnection);
             DataSet maailmanloppu = new DataSet();
             productHistory.Fill(maailmanloppu);

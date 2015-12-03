@@ -28,10 +28,11 @@
      <!--NAVIGATION STARTS HERE -->
         <nav>
             <ul>
-                <li><a href="default.aspx">Home</a></li>
+                <li><a href="Default.aspx">Home</a></li>
+                <li><a href="Buy.aspx">Buy</a></li>
+                <li><a href="game.aspx">Where's Shake?</a></li>
                 <li><a href="">Contact</a></li>
                 <li><a href="aboutus.aspx">About Us</a></li>
-                <li><a href="Buy.aspx">Buy</a></li>
             </ul>
         </nav>
     <!-- NAVIGATION ENDS HERE -->

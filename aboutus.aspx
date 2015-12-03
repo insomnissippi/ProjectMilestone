@@ -45,9 +45,10 @@
         <nav>
             <ul>
                 <li><a href="Default.aspx">Home</a></li>
-                <li><a href="contact.aspx">Contact</a></li>
-                <li><a href="aboutus.aspx">About Us</a></li>
                 <li><a href="Buy.aspx">Buy</a></li>
+                <li><a href="game.aspx">Where's Shake?</a></li>
+                <li><a href="contact.aspx">Contact</a></li>
+                <li><a href="">About Us</a></li>
             </ul>
         </nav>
     <!-- NAVIGATION ENDS HERE -->

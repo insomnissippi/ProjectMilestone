@@ -1,5 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="Buy.aspx.cs" Inherits="_Default" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ProductDetails.aspx.cs" Inherits="ProductDetails" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -115,7 +114,7 @@
         <nav>
             <ul>
                 <li><a href="Default.aspx">Home</a></li>
-                <li><a href="">Buy</a></li>
+                <li><a href="Buy.aspx">Buy</a></li>
                 <li><a href="game.aspx">Where's Shake?</a></li>
                 <li><a href="contact.aspx">Contact</a></li>
                 <li><a href="aboutus.aspx">About Us</a></li>
@@ -123,44 +122,16 @@
         </nav>
     <!-- NAVIGATION ENDS HERE -->
     <div class="maincontent">
-    
-    <!-- <div id="products">
-            <div id="ShakePhone">
-                <img src="athf5_screen1.jpg" height="280" width="280"/>
-                <p>The Shake Phone $19.95 </p>
-                <div id="ShakeForm"><form><p>Quantity:</p><input type="text" name="Quantity" style="width:40px;position:absolute;top:979px;left:564px;" />
-                <input type="submit" name="submit" value="BUY" style="margin:5px;position:absolute;top:974px;left:608px;"/></form></div>
-            </div>                
-                
-            <div id="ChessDragon">
-                <img src="2028125-chessdragon.jpg" height="280" width="280" />
-                <p>The Chess Dragon $25.95</p>
-                <form><p>Quantity:</p><input type="text" name="Quantity" style="width:40px;position:absolute;top:979px;left:864px;" />
-                <input type="submit" name="submit" value="BUY" style="margin:5px;position:absolute;top:974px;left:908px;"/></form>
-            </div>                
-                
-            <div id="Fourteen">
-                <img src="Fourteen.jpg" height="280" width="280"/>
-                <p>The Number Fourteen $1,000.00</p>
-                <form><p>Quantity:</p><input type="text" name="Quantity" style="width:40px;position:absolute;top:979px;left:1164px;" />
-                <input type="submit" name="submit" value="BUY" style="margin:5px;position:absolute;top:974px;left:1208px;"/></form>
-            </div>
 
-    </div>
-    -->
                     <div id="search">
                           <h1 id="h1text">ATHF</h1>
-                          SEARCH: <asp:TextBox ID="searchTerm" runat="server" />
-                          <asp:Button ID="searchBtn" runat="server"
-                            Text="GO!" OnClick="searchBtn_OnClick" />
-                            <br /> By Default this search will return all matches to your terms.
-                          <br />
+                          
                           <asp:Label ID="statusL" runat="server" />
                           
                           <asp:GridView ID="ProductsGrid" runat="server" AutoGenerateColumns="false">
                                <Columns>
                                     <asp:BoundField DataField="productID" HeaderText="Product ID" />
-                                    <asp:HyperLinkField DataTextField="productName" HeaderText="Product Name:" DataNavigateUrlFields="productID" DataNavigateUrlFormatString="productdetails.aspx?productID={0}" />
+                                    <asp:BoundField DataField="productName" HeaderText="Product Name" />
                                     <asp:BoundField DataField="productPrice" HeaderText="Product Price:" />
                              </Columns>
                          </asp:GridView>
