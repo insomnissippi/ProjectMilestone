@@ -24,3 +24,8 @@ use productsGrid
 Select * 
 from products
 Where productID like '%' OR productName like '%' OR productPrice like '%'
+
+use productsGrid
+insert into [dbo].[products] (productImage) values ('athf5_screen1.jpg');
+insert into [dbo].[products] (productImage) values ('2028125-chessdragon.jpg');
+insert into [dbo].[products] (productImage) values ('Fourteen.jpg');

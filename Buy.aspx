@@ -126,21 +126,21 @@
     
     <!-- <div id="products">
             <div id="ShakePhone">
-                <img src="athf5_screen1.jpg" height="280" width="280"/>
+                <img src="" height="280" width="280"/>
                 <p>The Shake Phone $19.95 </p>
                 <div id="ShakeForm"><form><p>Quantity:</p><input type="text" name="Quantity" style="width:40px;position:absolute;top:979px;left:564px;" />
                 <input type="submit" name="submit" value="BUY" style="margin:5px;position:absolute;top:974px;left:608px;"/></form></div>
             </div>                
                 
             <div id="ChessDragon">
-                <img src="2028125-chessdragon.jpg" height="280" width="280" />
+                <img src="" height="280" width="280" />
                 <p>The Chess Dragon $25.95</p>
                 <form><p>Quantity:</p><input type="text" name="Quantity" style="width:40px;position:absolute;top:979px;left:864px;" />
                 <input type="submit" name="submit" value="BUY" style="margin:5px;position:absolute;top:974px;left:908px;"/></form>
             </div>                
                 
             <div id="Fourteen">
-                <img src="Fourteen.jpg" height="280" width="280"/>
+                <img src="" height="280" width="280"/>
                 <p>The Number Fourteen $1,000.00</p>
                 <form><p>Quantity:</p><input type="text" name="Quantity" style="width:40px;position:absolute;top:979px;left:1164px;" />
                 <input type="submit" name="submit" value="BUY" style="margin:5px;position:absolute;top:974px;left:1208px;"/></form>
@@ -164,8 +164,6 @@
                                     <asp:BoundField DataField="productPrice" HeaderText="Product Price:" />
                              </Columns>
                          </asp:GridView>
-
-
                          
                     </div>
              </div> 
