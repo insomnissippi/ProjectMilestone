@@ -125,16 +125,24 @@
 
                     <div id="search">
                           <h1 id="h1text">ATHF</h1>
-                          
+                          <asp:Literal ID="PageTitle" runat="server" />
                           <asp:Label ID="statusL" runat="server" />
                           
-                          <asp:GridView ID="ProductsGrid" runat="server" AutoGenerateColumns="false">
-                               <Columns>
-                                    <asp:BoundField DataField="productID" HeaderText="Product ID" />
-                                    <asp:BoundField DataField="productName" HeaderText="Product Name" />
-                                    <asp:BoundField DataField="productPrice" HeaderText="Product Price:" />
-                             </Columns>
-                         </asp:GridView>
+  
+                    <asp:GridView ID="ProductsGrid" runat="server" 
+                        AutoGenerateColumns="false" ShowHeader="false" CellPadding="0" OnRowCommand="ProductGrid_RowCommand">
+                        <Columns>
+                            <asp:BoundField DataField="productID" HeaderText="Product ID" />
+                            <asp:HyperLinkField DataTextField="productName" HeaderText="Product Name:" DataNavigateUrlFields="productID" DataNavigateUrlFormatString="productdetails.aspx?productID={0}" />
+                            <asp:BoundField DataField="productPrice" HeaderText="Product Price:" />
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <asp:TextBox ID="QuantityTextBox" Width="20px" Text="1" runat="server" />
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:ButtonField Text="Add to Cart" CommandName="OnButtonAddToCart" ButtonType="Button" />
+                        </Columns>
+                    </asp:GridView>
 
 
                          

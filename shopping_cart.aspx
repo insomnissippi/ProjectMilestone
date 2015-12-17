@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="Default.aspx.cs" Inherits="_Default" %>
+<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -57,7 +57,7 @@
      <!--NAVIGATION STARTS HERE -->
         <nav>
             <ul>
-                <li><a href="">Home</a></li>
+                <li><a href="default.aspx">Home</a></li>
                 <li><a href="Buy.aspx">Buy</a></li>
                 <li><a href="game.aspx">Where's Shake?</a></li>
                 <li><a href="contact.aspx">Contact</a></li>
@@ -66,38 +66,33 @@
         </nav>
     <!-- NAVIGATION ENDS HERE -->
     <div class="maincontent">
-            <h1 id="h1text">"Number one in the hood, G" - <i>Yo momma</i></h1>
-         <!-- LEFT COLUMN -->
-        <div id="leftcolumn">
-                    <div class="aboutimage">     
-                        <p id="P1"> We are in the business of giving you the business, and business is good. 
-                                    We have only three products and they are in no way infringing on the 
-                                    copyrights you think they are.          
-                        </p>
-                        <h1 id="guym">GIVE US YOUR MONEY, NOW!</h1>
-                    </div>
-                </div>
-                <!-- LEFT COLUMN -->
-                
-                <!-- RIGHT COLUMN -->
-                <div id="rightcolumn">
-                    <div class="aboutimage">
-                        <img src="logo.jpg" alt="ATHF logo" width="300" height="268" />
-                    </div>
-                </div>
-                <p id="mainpara">Datt Man Products, LLC is not responsible for any damage done to the consumer, and or
-                   persons around the consumer. All of our products are guaranteed to function as they 
-                   were seen in the TV show <b>Aqua Teen Hunger Force</b>. We guarantee all of our
-                   products for 1 day after it has arrived at your abode.</p>
-                   <h2 style="text-align:center; font-weight: bold;">Thank you for your patronage!</h2>
-             </div> 
-<footer>
+           
+                <asp:Literal ID="CartBody" runat="server" />
+                        <asp:GridView ID="ProductsGrid" runat="server" 
+                                      AutoGenerateColumns="false" ShowHeader="true">
+                            <Columns>
+                                <asp:BoundField DataField="productID" HeaderText="Product ID" />
+                                <asp:BoundField DataField="productName" HeaderText="Product Name" />
+                                <asp:TemplateField HeaderText="Quantity">
+                                    <ItemTemplate>
+                                        <asp:TextBox ID="QuantityTextBox" Width="15px" Text='<%# Eval("Quantity") %>' runat="server" />
+                                        <asp:Button ID="QuantityUpdate" Text="Update" CommandName="OnButtonModifyQantity" CommandArgument='<%#((GridViewRow)Container).RowIndex%>' runat="server" />
+                                        <asp:Button ID="QuantityRemove" Text="Remove" CommandName="OnButtonRemoveItem" CommandArgument='<%#((GridViewRow)Container).RowIndex%>' runat="server" />
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:BoundField DataField="Price" DataFormatString="{0:c2}" HeaderText="Price Each" />
+                                <asp:BoundField DataField="Total" DataFormatString="{0:c2}" HeaderText="Total Price" />
+                            </Columns>
+                        </asp:GridView>
+               <asp:Literal ID="CartTotal" runat="server" />
+             
+
+    </div>
+                   <footer>
                     <p>&copy; Datt Man Products, LLC</p>
                     <p>Datt Man Products, LLC is not responsible for whatever opinions and remarks come from this website.</p>
                 </footer>  
-    </div>
-    
-                  
+   
     </form>
 </body>
 </html>
