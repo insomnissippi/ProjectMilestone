@@ -161,7 +161,7 @@
                                <Columns>
                                     <asp:BoundField DataField="productID" HeaderText="Product ID" />
                                     <asp:HyperLinkField DataTextField="productName" HeaderText="Product Name:" DataNavigateUrlFields="productID" DataNavigateUrlFormatString="productdetails.aspx?productID={0}" />
-                                    <asp:BoundField DataField="productPrice" HeaderText="Product Price:" />
+                                    <asp:BoundField DataField="productPrice" DataFormatString="{0:c2}"  HeaderText="Product Price:" />
                              </Columns>
                          </asp:GridView>
                          

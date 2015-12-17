@@ -49,6 +49,15 @@
         color: Red;
         text-align: center;
     }
+    #prod
+    {
+        font-family: Sans-Serif;
+        font-weight: bold;
+        font-size: 25px;
+        color: black;
+        text-align: center;
+        margin: 0 auto;
+    }
     #searchBtn
     {
           outline: none;
@@ -62,7 +71,6 @@
     #searchBtn:active:before {
       width: 120%;
       padding-top: 120%;
-      
       transition: width .2s ease-out, padding-top .2s ease-out;
     }
     #searchBtn:hover, #searchBtn:focus {
@@ -125,6 +133,7 @@
 
                     <div id="search">
                           <h1 id="h1text">ATHF</h1>
+
                           <asp:Literal ID="PageTitle" runat="server" />
                           <asp:Label ID="statusL" runat="server" />
                           
@@ -143,10 +152,7 @@
                             <asp:ButtonField Text="Add to Cart" CommandName="OnButtonAddToCart" ButtonType="Button" />
                         </Columns>
                     </asp:GridView>
-
-
-                         
-                    </div>
+             </div>
              </div> 
     <footer>
         <p>&copy; Datt Man Products, LLC</p>
